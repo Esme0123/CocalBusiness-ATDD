@@ -5,6 +5,6 @@
 public class TestConfig {
 
     // Reemplazar con la URL real desplegada en Vercel/Netlify
-    public static final String BASE_URL = "https://cocal-bussines.vercel.app/";
+    public static final String BASE_URL = "https://cocal-bussines.vercel.app";
     public static final int TIMEOUT_SEGUNDOS = 15;
 }
