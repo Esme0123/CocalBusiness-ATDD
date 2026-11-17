@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite ATDD Cocal Business" parallel="none">
+
+    <!-- Esmeralda Medina: CB-1 y CB-2 -->
+    <test name="CB01_LoginFormularioVisibleTest"><classes><class name="CB01_LoginFormularioVisibleTest"/></classes></test>
+    <test name="CB01_MostrarOcultarPasswordTest"><classes><class name="CB01_MostrarOcultarPasswordTest"/></classes></test>
+    <test name="CB02_LoginCamposVaciosTest"><classes><class name="CB02_LoginCamposVaciosTest"/></classes></test>
+    <test name="CB02_LoginContrasenaIncorrectaTest"><classes><class name="CB02_LoginContrasenaIncorrectaTest"/></classes></test>
+    <test name="CB02_LoginCorreoInexistenteTest"><classes><class name="CB02_LoginCorreoInexistenteTest"/></classes></test>
+
+    <!-- Joan Riveros: CB-31 -->
+    <test name="CB31_BloqueoRutaProtegidaSinTokenTest"><classes><class name="CB31_BloqueoRutaProtegidaSinTokenTest"/></classes></test>
+    <test name="CB31_AccesoAdminMuestraCrearUsuarioTest"><classes><class name="CB31_AccesoAdminMuestraCrearUsuarioTest"/></classes></test>
+    <test name="CB31_AccesoEmpleadoOcultaCrearUsuarioTest"><classes><class name="CB31_AccesoEmpleadoOcultaCrearUsuarioTest"/></classes></test>
+    <test name="CB31_NavegarCrearUsuarioAdminTest"><classes><class name="CB31_NavegarCrearUsuarioAdminTest"/></classes></test>
+    <test name="CB31_CerrarSesionInvalidaTokenTest"><classes><class name="CB31_CerrarSesionInvalidaTokenTest"/></classes></test>
+
+    <!-- Alina Mollinedo: CB-16 -->
+    <test name="CB16_CargaVistaPrimerLoginTest"><classes><class name="CB16_CargaVistaPrimerLoginTest"/></classes></test>
+    <test name="CB16_ValidarCamposVaciosPrimerLoginTest"><classes><class name="CB16_ValidarCamposVaciosPrimerLoginTest"/></classes></test>
+    <test name="CB16_ValidarLongitudMinimaPasswordTest"><classes><class name="CB16_ValidarLongitudMinimaPasswordTest"/></classes></test>
+    <test name="CB16_ValidarContrasenasNoCoincidenTest"><classes><class name="CB16_ValidarContrasenasNoCoincidenTest"/></classes></test>
+    <test name="CB16_MostrarOcultarNuevaPasswordTest"><classes><class name="CB16_MostrarOcultarNuevaPasswordTest"/></classes></test>
+
+    <!-- Raquel Osorio: CB-19 -->
+    <test name="CB19_NavegarRecuperarContrasenaTest"><classes><class name="CB19_NavegarRecuperarContrasenaTest"/></classes></test>
+    <test name="CB19_ValidarCorreoVacioRecuperacionTest"><classes><class name="CB19_ValidarCorreoVacioRecuperacionTest"/></classes></test>
+    <test name="CB19_ValidarFormatoCorreoRecuperacionTest"><classes><class name="CB19_ValidarFormatoCorreoRecuperacionTest"/></classes></test>
+    <test name="CB19_SolicitarRecuperacionCorreoNoRegistradoTest"><classes><class name="CB19_SolicitarRecuperacionCorreoNoRegistradoTest"/></classes></test>
+    <test name="CB19_VolverAlLoginDesdeRecuperacionTest"><classes><class name="CB19_VolverAlLoginDesdeRecuperacionTest"/></classes></test>
+
+</suite>
