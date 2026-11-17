@@ -43,7 +43,7 @@ public class CB01_MostrarOcultarPasswordTest {
         /********** 1. Preparacion de la prueba **********/
         driver.get(TestConfig.BASE_URL + "/login");
         WebElement inputPassword = wait.until(
-            ExpectedConditions.visibilityOfElementLocated(By.xpath("//form//input[2]"))
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("(//form//input)[2]"))
         );
         inputPassword.sendKeys("Emp2026!");
 
