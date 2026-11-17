@@ -4,7 +4,7 @@ Repositorio de pruebas de aceptación automatizadas desarrolladas con **Java, Se
 
 ## Requisitos previos para ejecución
 1. Tener instalado **Java JDK 17+**, **Maven** y **Google Chrome**.
-2. Tener levantado el servidor Backend (Node.js/Express + PostgreSQL) y Frontend (Vue.js en `http://localhost:5173`).
+2. Tener levantado el servidor Backend (Node.js/Express + PostgreSQL) y Frontend (Vue.js en `https://cocal-bussines.vercel.app`).
 
 ## Comandos de ejecución
 * **Ejecutar todas las pruebas (20 pruebas):**
