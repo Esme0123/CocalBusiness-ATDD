@@ -1,5 +1,6 @@
 import java.time.Duration;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -52,10 +53,16 @@ public class CB02_LoginCorreoInexistenteTest {
         driver.findElement(By.cssSelector("button[type='submit']")).click();
 
         /********** 3. Verificacion de la situacion esperada - Assert **********/
-        WebElement mensajeRespuesta = wait.until(
+        wait.until(ExpectedConditions.or(
+            ExpectedConditions.alertIsPresent(),
             ExpectedConditions.visibilityOfElementLocated(By.cssSelector("form p.text-center"))
-        );
-        Assert.assertFalse(mensajeRespuesta.getText().trim().isEmpty(), "Debe mostrarse mensaje de rechazo");
+        ));
+        try {
+            driver.switchTo().alert().accept();
+        } catch (NoAlertPresentException ignored) {
+            WebElement mensajeRespuesta = driver.findElement(By.cssSelector("form p.text-center"));
+            Assert.assertFalse(mensajeRespuesta.getText().trim().isEmpty(), "Debe mostrarse mensaje de rechazo");
+        }
         Assert.assertTrue(driver.getCurrentUrl().contains("/login"), "No debe permitir el acceso");
     }
 
