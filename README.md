@@ -37,12 +37,12 @@ Repositorio de pruebas de aceptación automatizadas desarrolladas con **Java, Se
 | **Alina Mollinedo** | Cambio Obligatorio de Contraseña | `CB-16` | `CB16_CargaVistaPrimerLoginTest`, `CB16_ValidarCamposVaciosPrimerLoginTest`, `CB16_ValidarLongitudMinimaPasswordTest`, `CB16_ValidarContrasenasNoCoincidenTest`, `CB16_MostrarOcultarNuevaPasswordTest` |
 | **Raquel Osorio** | Recuperación de Contraseña | `CB-19` | `CB19_NavegarRecuperarContrasenaTest`, `CB19_ValidarCorreoVacioRecuperacionTest`, `CB19_ValidarFormatoCorreoRecuperacionTest`, `CB19_SolicitarRecuperacionCorreoNoRegistradoTest`, `CB19_VolverAlLoginDesdeRecuperacionTest` |
 
-## Métricas de Automatización (Elemento de Competencia 3)
+## Métricas de Tiempo (Automatización vs. Ejecución Real)
 
-| Integrante | Pruebas Automatizadas | Tiempo Total Invertido | Tiempo Promedio por Caso |
-| :--- | :---: | :---: | :---: |
-| Esmeralda Medina | 5 | 125 min | 25 min |
-| Joan Riveros | 5 | 120 min | 24 min |
-| Alina Mollinedo | 5 | 130 min | 26 min |
-| Raquel Osorio | 5 | 125 min | 25 min |
-| **Total / Promedio General** | **20** | **500 min** | **25 min / caso** |
+| Integrante | Pruebas | Tiempo Total Automatización (Programación) | Promedio Automatización / Caso | Tiempo Total Ejecución (TestNG Report) | Promedio Ejecución / Prueba |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Esmeralda Medina** | 5 | 125 min | 25 min | 11.14 s (11,142 ms) | 2.23 s |
+| **Joan Riveros** | 5 | 120 min | 24 min | 6.17 s (6,172 ms) | 1.23 s |
+| **Alina Mollinedo** | 5 | 130 min | 26 min | 6.65 s (6,654 ms) | 1.33 s |
+| **Raquel Osorio** | 5 | 125 min | 25 min | 6.30 s (6,301 ms) | 1.26 s |
+| **Total / Promedio General** | **20** | **500 min** | **25 min / caso** | **30.27 s (30,269 ms)** | **1.51 s / prueba** |
