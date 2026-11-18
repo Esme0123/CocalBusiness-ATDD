@@ -11,14 +11,26 @@ Repositorio de pruebas de aceptación automatizadas desarrolladas con **Java, Se
 2. Conexión a internet para interactuar con el despliegue en Vercel y Render.
 
 ## Comandos de ejecución
-* **Ejecutar todas las pruebas (20 pruebas de aceptación):**
+* **Ejecutar todas las pruebas (20 pruebas de aceptación secuenciales mediante `testng.xml`):**
   `mvn clean compile test`
 * **Ejecutar una prueba específica:**
   `mvn clean compile test -Dtest=CB01_LoginFormularioVisibleTest`
 
+## Proceso Identificado y los 5 Casos de Prueba Base (Entregable #2)
+
+* **Proceso / Flujo seleccionado:** Gestión de Autenticación, Control de Sesiones por Rol y Recuperación de Contraseñas.
+
+| ID Caso (Entregable #2) | Nombre del Caso de Prueba Base | Descripción y Criterio de Aceptación |
+| :--- | :--- | :--- |
+| **`CB-1`** | Despliegue y funcionalidad del formulario de Login | Verifica que `/login` cargue los campos de correo, contraseña, el botón `Entrar` y permita alternar la visibilidad de la clave. |
+| **`CB-2`** | Rechazo de inicio de sesión inválido | Valida que el sistema impida el acceso y muestre alertas ante campos vacíos, contraseña incorrecta o correo no registrado. |
+| **`CB-16`** | Cambio obligatorio de contraseña en primer ingreso | Comprueba las validaciones en `/password/primer-login` (campos obligatorios, longitud mínima de 6 caracteres y coincidencia de claves). |
+| **`CB-19`** | Solicitud de recuperación de contraseña | Verifica la navegación a `/reset-password`, validación de formato de correo, respuesta ante correos no registrados y retorno al login. |
+| **`CB-31`** | Control de sesión activa, permisos por rol y Logout | Valida el bloqueo de `/pagina-principal` sin token, la visibilidad diferenciada entre roles (`ADMIN` vs `EMPLEADO`) y la eliminación del JWT al cerrar sesión. |
+
 ## Matriz de Trazabilidad (Entregable #2 → ATDD)
 
-| Integrante | Flujo / Módulo | Caso Base (Entregable #2) | Clases de Prueba Implementadas (5 por integrante) |
+| Integrante | Flujo / Módulo | Caso Base | Clases de Prueba Implementadas (5 por integrante) |
 | :--- | :--- | :--- | :--- |
 | **Esmeralda Medina** | Autenticación y Validación de Login | `CB-1`, `CB-2` | `CB01_LoginFormularioVisibleTest`, `CB01_MostrarOcultarPasswordTest`, `CB02_LoginContrasenaIncorrectaTest`, `CB02_LoginCorreoInexistenteTest`, `CB02_LoginCamposVaciosTest` |
 | **Joan Riveros** | Control de Sesiones, Logout y Roles | `CB-31` | `CB31_BloqueoRutaProtegidaSinTokenTest`, `CB31_AccesoAdminMuestraCrearUsuarioTest`, `CB31_AccesoEmpleadoOcultaCrearUsuarioTest`, `CB31_NavegarCrearUsuarioAdminTest`, `CB31_CerrarSesionInvalidaTokenTest` |
